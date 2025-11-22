@@ -162,7 +162,12 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-200">
-          <button className="group relative px-8 py-4 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] animate-pulse-slow">
+          <a
+            href="https://apps.apple.com/tr/app/hexamerge-color-merge-puzzle/id6755496409?l=tr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-8 py-4 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] animate-pulse-slow"
+          >
             <div className="relative z-10 flex items-center gap-3">
               <Apple className="w-5 h-5" />
               <div className="text-left">
@@ -171,13 +176,13 @@ const Hero = () => {
               </div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-orange-200 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </button>
+          </a>
 
-          <button className="group px-8 py-4 bg-zinc-900 border border-zinc-800 text-white rounded-lg font-bold flex items-center gap-3 hover:border-orange-500/50 hover:bg-zinc-800 transition-all duration-300 transform hover:scale-105">
+          <button className="group px-8 py-4 bg-zinc-900 border border-zinc-800 text-white rounded-lg font-bold flex items-center gap-3 hover:border-orange-500/50 hover:bg-zinc-800 transition-all duration-300 transform hover:scale-105 opacity-50 cursor-not-allowed">
             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" className="w-5 h-5 invert brightness-200" />
              <div className="text-left">
                 <div className="text-[10px] text-zinc-500 leading-none mb-1">GOOGLE PLAY</div>
-                <div className="leading-none">DOWNLOAD</div>
+                <div className="leading-none">COMING SOON</div>
               </div>
           </button>
         </div>

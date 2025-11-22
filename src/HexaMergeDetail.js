@@ -91,7 +91,12 @@ const HexaMergeDetail = () => {
 
                 {/* Download Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                  <button className="group relative px-8 py-4 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                  <a
+                    href="https://apps.apple.com/tr/app/hexamerge-color-merge-puzzle/id6755496409?l=tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative px-8 py-4 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                  >
                     <div className="relative z-10 flex items-center gap-3">
                       <Apple className="w-5 h-5" />
                       <div className="text-left">
@@ -100,13 +105,13 @@ const HexaMergeDetail = () => {
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-200 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                  </button>
+                  </a>
 
-                  <button className="group px-8 py-4 bg-zinc-900 border border-zinc-800 text-white rounded-lg font-bold flex items-center gap-3 hover:border-orange-500/50 hover:bg-zinc-800 transition-all duration-300">
+                  <button className="group px-8 py-4 bg-zinc-900 border border-zinc-800 text-white rounded-lg font-bold flex items-center gap-3 hover:border-orange-500/50 hover:bg-zinc-800 transition-all duration-300 opacity-50 cursor-not-allowed">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" className="w-5 h-5 invert brightness-200" />
                     <div className="text-left">
                       <div className="text-xs text-zinc-500 leading-none mb-1">Get it on</div>
-                      <div className="leading-none">Google Play</div>
+                      <div className="leading-none">Coming Soon</div>
                     </div>
                   </button>
                 </div>
@@ -284,17 +289,22 @@ const HexaMergeDetail = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="group relative px-10 py-5 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+              <a
+                href="https://apps.apple.com/tr/app/hexamerge-color-merge-puzzle/id6755496409?l=tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative px-10 py-5 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+              >
                 <div className="relative z-10 flex items-center gap-3">
                   <Apple className="w-6 h-6" />
                   <span>Download for iOS</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-200 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-              </button>
+              </a>
 
-              <button className="group px-10 py-5 bg-zinc-900 border-2 border-zinc-800 text-white rounded-lg font-bold flex items-center gap-3 hover:border-orange-500/50 hover:bg-zinc-800 transition-all duration-300">
+              <button className="group px-10 py-5 bg-zinc-900 border-2 border-zinc-800 text-white rounded-lg font-bold flex items-center gap-3 hover:border-orange-500/50 hover:bg-zinc-800 transition-all duration-300 opacity-50 cursor-not-allowed">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" className="w-6 h-6 invert brightness-200" />
-                <span>Download for Android</span>
+                <span>Coming Soon for Android</span>
               </button>
             </div>
 
