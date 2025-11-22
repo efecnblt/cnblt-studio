@@ -1,0 +1,68 @@
+HexaMerge Privacy Policy
+Last Updated: March 2025
+
+Introduction
+HexaMerge ("we," "our," or "us") is built with a privacy-first mindset. The game is designed to be enjoyed offline, and nearly all data it touches stays on your device. We do not run player accounts, remote databases, or analytics that follow you across the web.
+
+This Privacy Policy explains what limited information is handled by the app, how it is used, and the choices you have. By playing HexaMerge you agree to these practices. If you disagree with any part of this policy, please discontinue use of the app.
+
+What Data We Handle
+1. Game Data Stored on Your Device
+- Current board state, next pieces, and undo history
+- Statistics such as high scores, longest chains, and recent results
+- Settings preferences (sound, vibration, themes, accessibility)
+- Achievement progress and tutorial completion flags
+This information never leaves your device unless you manually back it up or share it.
+
+2. Information You Choose to Share
+We only receive personal information if you proactively contact us—for example, by emailing support@cnblt.studio with feedback or a bug report. Any details you include in that communication will be used solely to respond to your request.
+
+3. Optional Support Links
+The "Support the Developer" option in HexaMerge opens an external Buy Me a Coffee page in your browser. That service operates under its own privacy policy and may collect additional information in line with their terms. We do not receive your payment details or account credentials from that service, and no data is shared back with CNBLT Studio.
+
+How We Use Your Information
+- Ensure the game functions as intended across sessions and devices
+- Persist your scores, unlocks, and preferences between play sessions
+- Respond to questions or support requests that you send to us
+- Monitor app stability and address defects based on voluntary feedback
+
+Third-Party Services
+App store providers (e.g., Google Play, Apple App Store) manage downloads, updates, and crash telemetry in line with their own privacy notices.
+
+Buy Me a Coffee (optional) operates under https://www.buymeacoffee.com/privacy-policy. We do not receive your payment credentials from that service.
+
+Data Storage and Security
+- Local Storage: Your data remains on your device and is not transmitted to our servers.
+- Security Measures: We implement reasonable safeguards but cannot guarantee absolute security.
+- Data Retention: Data remains on your device until you uninstall the app or clear its storage.
+
+Children's Privacy
+HexaMerge is suitable for players of all ages, including children under 13. The game does not require personal identifiers, does not include chat or social features, does not display ads or sell currency, and does not share data for marketing purposes. Parents can manage access to external support links via device controls.
+
+Your Rights and Choices
+- Access and Deletion: Uninstall the app or clear its data to remove all local information. The in-game "Reset Progress" option offers a quick wipe.
+- External Links and Donations: Opening supporter links is voluntary. You can restrict purchases or browser access via parental controls.
+- Communications: You choose what to include if you email us; we retain correspondence only as long as needed to resolve your request.
+
+International Users
+By using HexaMerge outside your country, you consent to the transfer of information to jurisdictions with different data protection laws.
+
+Changes to This Privacy Policy
+We may update this policy from time to time and will revise the “Last Updated” date. Continued use of the app constitutes acceptance of the updated policy.
+
+Contact Us
+Email: support@cnblt.studio
+App: HexaMerge
+Developer: CNBLT Studio
+We aim to respond within 30 days.
+
+Legal Compliance
+This policy is designed to comply with applicable sections of:
+- Google Play Developer Program Policies
+- COPPA
+- GDPR (where applicable)
+- CCPA (where applicable)
+
+By continuing to use HexaMerge, you acknowledge that you have read and understood this Privacy Policy.
+
+
