@@ -372,7 +372,7 @@ export default function HomePage() {
       },
       stats: {
         rating: '5.0',
-        value: '7',
+        value: '100+',
         label: 'Downloads'
       }
     },

@@ -28,7 +28,7 @@ const HexaMergeDetail = () => {
 
   const stats = [
     { label: 'Rating', value: '5.0', icon: Star },
-    { label: 'Downloads', value: '7', icon: Download },
+    { label: 'Downloads', value: '100+', icon: Download },
     { label: 'Version', value: '1.2.0', icon: Zap }
   ];
 
