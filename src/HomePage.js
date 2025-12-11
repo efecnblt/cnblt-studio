@@ -143,39 +143,80 @@ const Navbar = () => {
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 overflow-hidden">
-      <div className="relative z-10 text-center max-w-5xl">
+      <div className="relative z-10 text-center max-w-6xl">
 
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-[10px] font-bold tracking-widest mb-8 animate-fade-in-up">
           <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-          ONLINE & READY
+          2 APPS AVAILABLE
         </div>
 
-        <h1 className="font-orbitron text-7xl md:text-9xl font-black text-white leading-tight tracking-tighter mb-6 relative group cursor-default select-none">
+        <h1 className="font-orbitron text-6xl md:text-8xl lg:text-9xl font-black text-white leading-tight tracking-tighter mb-6 relative group cursor-default select-none">
           <span className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-amber-600 opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500"></span>
-          <span className="relative inline-block transition-transform duration-300 group-hover:-translate-y-2">HEXA</span>
-          <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500 transition-transform duration-300 group-hover:translate-y-2">MERGE</span>
+          <span className="relative inline-block transition-transform duration-300 group-hover:-translate-y-2">CNBLT</span>
+          <br />
+          <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500 transition-transform duration-300 group-hover:translate-y-2">STUDIO</span>
         </h1>
 
-        <p className="font-inter text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up delay-100">
-          Crafting experiences that matter. Minimalist design, maximum impact.
-          Built by CNBLT Studio.
+        <p className="font-inter text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up delay-100">
+          Crafting thoughtful applications that blend simplicity with purpose.
+          From puzzle games to productivity tools—minimalist design, maximum impact.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-200">
+        {/* Featured Apps Preview */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12 animate-fade-in-up delay-200">
+          {/* HexaMerge Preview */}
           <a
-            href="https://apps.apple.com/tr/app/hexamerge-color-merge-puzzle/id6755496409?l=tr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-8 py-4 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] animate-pulse-slow"
+            href="#projects"
+            className="group relative p-6 bg-zinc-900/40 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:transform hover:scale-[1.02]"
           >
-            <div className="relative z-10 flex items-center gap-3">
-              <Apple className="w-5 h-5" />
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-orange-500/30">
+                <img src="/gamess.jpg" alt="HexaMerge" className="w-full h-full object-cover" />
+              </div>
               <div className="text-left">
-                <div className="text-[10px] opacity-60 leading-none mb-1">APP STORE</div>
-                <div className="leading-none">DOWNLOAD</div>
+                <h3 className="font-orbitron text-xl font-bold text-white">HexaMerge</h3>
+                <p className="text-xs text-zinc-500">Puzzle Game</p>
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-200 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            <p className="text-sm text-zinc-400 text-left">Minimalist hexagonal number puzzle that challenges spatial thinking.</p>
+            <div className="flex items-center gap-2 mt-4 text-orange-400 text-sm font-bold">
+              <span>Explore</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </a>
+
+          {/* Subify Preview */}
+          <a
+            href="#projects"
+            className="group relative p-6 bg-zinc-900/40 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-500 hover:transform hover:scale-[1.02]"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-cyan-500/30">
+                <img src="/subify/subify1.jpg" alt="Subify" className="w-full h-full object-cover" />
+              </div>
+              <div className="text-left">
+                <h3 className="font-orbitron text-xl font-bold text-white">Subify</h3>
+                <p className="text-xs text-zinc-500">Productivity App</p>
+              </div>
+            </div>
+            <p className="text-sm text-zinc-400 text-left">Track subscriptions and get smart reminders before payments are due.</p>
+            <div className="flex items-center gap-2 mt-4 text-cyan-400 text-sm font-bold">
+              <span>Explore</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </a>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
+          <a
+            href="#projects"
+            className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(245,139,48,0.4)]"
+          >
+            <div className="relative z-10 flex items-center gap-3">
+              <Layers className="w-5 h-5" />
+              <span>VIEW ALL APPS</span>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-amber-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
         </div>
       </div>
