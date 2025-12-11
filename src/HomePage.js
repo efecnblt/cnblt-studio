@@ -177,14 +177,6 @@ const Hero = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-orange-200 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
-
-          <button className="group px-8 py-4 bg-zinc-900 border border-zinc-800 text-white rounded-lg font-bold flex items-center gap-3 hover:border-orange-500/50 hover:bg-zinc-800 transition-all duration-300 transform hover:scale-105 opacity-50 cursor-not-allowed">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" className="w-5 h-5 invert brightness-200" />
-             <div className="text-left">
-                <div className="text-[10px] text-zinc-500 leading-none mb-1">GOOGLE PLAY</div>
-                <div className="leading-none">COMING SOON</div>
-              </div>
-          </button>
         </div>
       </div>
 
@@ -195,58 +187,84 @@ const Hero = () => {
   );
 };
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
+  const gradientColors = project.theme === 'orange'
+    ? 'from-orange-500/30 via-transparent to-amber-700/30'
+    : 'from-cyan-500/30 via-transparent to-blue-700/30';
+
+  const shadowColor = project.theme === 'orange'
+    ? 'shadow-orange-900/50'
+    : 'shadow-cyan-900/50';
+
+  const hoverBorderColor = project.theme === 'orange'
+    ? 'hover:border-orange-500/30'
+    : 'hover:border-cyan-500/30';
+
+  const linkColor = project.theme === 'orange'
+    ? 'text-orange-400'
+    : 'text-cyan-400';
+
+  const decorColor1 = project.theme === 'orange'
+    ? 'bg-orange-500/30'
+    : 'bg-cyan-500/30';
+
+  const decorColor2 = project.theme === 'orange'
+    ? 'bg-amber-500/30'
+    : 'bg-blue-500/30';
+
   return (
-    <div className="group relative w-full bg-zinc-900/40 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:transform hover:scale-[1.02]">
+    <div className={`group relative w-full bg-zinc-900/40 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden ${hoverBorderColor} transition-all duration-500 hover:transform hover:scale-[1.02]`}>
       {/* Scanline Effect on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 ease-in-out z-10 pointer-events-none" />
+      <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-${project.theme}-500/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 ease-in-out z-10 pointer-events-none`} />
 
       <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12 items-center">
         <div className="order-2 md:order-1 space-y-6">
           <div className="flex items-center gap-3">
-            <span className="px-2 py-1 bg-green-500/10 text-green-400 text-[10px] font-bold rounded border border-green-500/20 animate-pulse">V1.2.0 LIVE</span>
-            <span className="px-2 py-1 bg-zinc-800 text-zinc-400 text-[10px] font-bold rounded border border-zinc-700">PUZZLE</span>
+            <span className={`px-2 py-1 ${project.badge.bg} ${project.badge.text} text-[10px] font-bold rounded border ${project.badge.border} ${project.badge.animate ? 'animate-pulse' : ''}`}>
+              {project.badge.label}
+            </span>
+            <span className="px-2 py-1 bg-zinc-800 text-zinc-400 text-[10px] font-bold rounded border border-zinc-700">
+              {project.category}
+            </span>
           </div>
 
-          <h3 className="text-4xl font-orbitron font-bold text-white">HexaMerge</h3>
+          <h3 className="text-4xl font-orbitron font-bold text-white">{project.name}</h3>
           <p className="text-zinc-400 leading-relaxed">
-            A minimalist number puzzle that challenges your spatial thinking.
-            Merge hexagonal tiles, plan your moves, and chase high scores.
-            Clean design. No ads. Pure focus.
+            {project.description}
           </p>
 
           <div className="flex gap-6 pt-4">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white">5.0</span>
+              <span className="text-2xl font-bold text-white">{project.stats.rating}</span>
               <span className="text-xs text-zinc-500 uppercase tracking-wider">App Store</span>
             </div>
             <div className="w-px h-10 bg-zinc-800" />
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white">7</span>
-              <span className="text-xs text-zinc-500 uppercase tracking-wider">Downloads</span>
+              <span className="text-2xl font-bold text-white">{project.stats.value}</span>
+              <span className="text-xs text-zinc-500 uppercase tracking-wider">{project.stats.label}</span>
             </div>
           </div>
 
-          <Link to="/projects/hexamerge" className="inline-flex items-center gap-2 text-orange-400 font-bold hover:gap-4 transition-all group-hover/link">
+          <Link to={project.link} className={`inline-flex items-center gap-2 ${linkColor} font-bold hover:gap-4 transition-all group-hover/link`}>
             View Details <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
         <div className="order-1 md:order-2 relative flex justify-center">
            {/* Screenshot Preview */}
-           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-[2rem] shadow-2xl shadow-orange-900/50 overflow-hidden transform group-hover:scale-105 group-hover:rotate-3 transition-all duration-500">
+           <div className={`relative w-64 h-64 md:w-80 md:h-80 rounded-[2rem] shadow-2xl ${shadowColor} overflow-hidden transform group-hover:scale-105 group-hover:rotate-3 transition-all duration-500`}>
               {/* Screenshot with gradient overlay */}
               <img
-                src="/gamess.jpg"
-                alt="HexaMerge Preview"
+                src={project.image}
+                alt={`${project.name} Preview`}
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />
               {/* Gradient Overlay for better contrast */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/30 via-transparent to-amber-700/30" />
+              <div className={`absolute inset-0 bg-gradient-to-br ${gradientColors}`} />
 
               {/* Decor */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500/30 backdrop-blur-md rounded-full animate-pulse-slow" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-amber-500/30 backdrop-blur-md rounded-full" />
+              <div className={`absolute -top-4 -right-4 w-24 h-24 ${decorColor1} backdrop-blur-md rounded-full animate-pulse-slow`} />
+              <div className={`absolute -bottom-4 -left-4 w-16 h-16 ${decorColor2} backdrop-blur-md rounded-full`} />
            </div>
         </div>
       </div>
@@ -296,6 +314,49 @@ const Footer = () => (
 );
 
 export default function HomePage() {
+  const projects = [
+    {
+      name: 'HexaMerge',
+      category: 'PUZZLE',
+      description: 'A minimalist number puzzle that challenges your spatial thinking. Merge hexagonal tiles, plan your moves, and chase high scores. Clean design. No ads. Pure focus.',
+      image: '/gamess.jpg',
+      link: '/projects/hexamerge',
+      theme: 'orange',
+      badge: {
+        label: 'V1.2.0 LIVE',
+        bg: 'bg-green-500/10',
+        text: 'text-green-400',
+        border: 'border-green-500/20',
+        animate: true
+      },
+      stats: {
+        rating: '5.0',
+        value: '7',
+        label: 'Downloads'
+      }
+    },
+    {
+      name: 'Subify',
+      category: 'PRODUCTIVITY',
+      description: 'Take control of your subscriptions. Track Netflix, Spotify, and all your favorite services. Get smart reminders before trials end and payments are due. Stay organized, save money.',
+      image: '/subify/subify1.jpg',
+      link: '/projects/subify',
+      theme: 'cyan',
+      badge: {
+        label: 'NEW RELEASE',
+        bg: 'bg-cyan-500/10',
+        text: 'text-cyan-400',
+        border: 'border-cyan-500/20',
+        animate: true
+      },
+      stats: {
+        rating: '5.0',
+        value: 'New',
+        label: 'Downloads'
+      }
+    }
+  ];
+
   return (
     <>
       <PageLoader />
@@ -314,7 +375,11 @@ export default function HomePage() {
               <div className="w-12 h-1 bg-orange-500 rounded-full mb-2" />
               <h2 className="font-orbitron text-3xl font-bold text-white">FEATURED PROJECTS</h2>
             </div>
-            <ProjectCard />
+            <div className="space-y-12">
+              {projects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
           </div>
         </section>
 

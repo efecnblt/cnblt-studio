@@ -1,35 +1,35 @@
 import React from 'react';
-import { ArrowLeft, Apple, Star, Shield, Zap, Target, Trophy, Download } from 'lucide-react';
+import { ArrowLeft, Apple, Star, Bell, TrendingUp, Calendar, Zap, Download, DollarSign } from 'lucide-react';
 import PageLoader from './components/PageLoader';
 
-const HexaMergeDetail = () => {
+const SubifyDetail = () => {
   const features = [
     {
-      icon: Target,
-      title: 'Strategic Gameplay',
-      description: 'Plan your moves carefully. Every placement matters in this minimalist puzzle experience.'
+      icon: Bell,
+      title: 'Smart Notifications',
+      description: 'Get notified before trial ends and one day before payment is due. Never miss a deadline.'
     },
     {
-      icon: Zap,
-      title: 'Smooth Performance',
-      description: 'Optimized for 60FPS gameplay. Responsive controls that feel natural and intuitive.'
+      icon: Calendar,
+      title: 'Payment Tracking',
+      description: 'Track all your subscription payment dates and amounts in one place. Stay organized.'
     },
     {
-      icon: Shield,
-      title: 'No Ads, No Tracking',
-      description: 'Your privacy matters. Play without interruptions or data collection.'
+      icon: TrendingUp,
+      title: 'Monthly & Yearly Stats',
+      description: 'Visualize your spending with detailed monthly and yearly statistics. Make informed decisions.'
     },
     {
-      icon: Trophy,
-      title: 'Endless Challenge',
-      description: 'Compete with yourself. Track your progress and beat your high scores.'
+      icon: DollarSign,
+      title: 'Budget Management',
+      description: 'Monitor your total subscription costs and manage your budget effectively.'
     }
   ];
 
   const stats = [
     { label: 'Rating', value: '5.0', icon: Star },
-    { label: 'Downloads', value: '7', icon: Download },
-    { label: 'Version', value: '1.2.0', icon: Zap }
+    { label: 'Downloads', value: 'New', icon: Download },
+    { label: 'Version', value: '1.0.0', icon: Zap }
   ];
 
   return (
@@ -40,14 +40,14 @@ const HexaMergeDetail = () => {
         <section className="relative pt-24 pb-16 overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
             <a
               href="/"
-              className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 mb-8 transition-colors group"
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 mb-8 transition-colors group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               Back to Home
@@ -57,21 +57,21 @@ const HexaMergeDetail = () => {
               {/* Left: Info */}
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 bg-green-500/10 text-green-400 text-xs font-bold rounded border border-green-500/20">
-                    AVAILABLE NOW
+                  <span className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs font-bold rounded border border-cyan-500/20 animate-pulse">
+                    NEW RELEASE
                   </span>
                   <span className="px-3 py-1 bg-zinc-800 text-zinc-400 text-xs font-bold rounded border border-zinc-700">
-                    PUZZLE
+                    PRODUCTIVITY
                   </span>
                 </div>
 
                 <h1 className="font-orbitron text-5xl md:text-7xl font-black text-white leading-tight">
-                  Hexa<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Merge</span>
+                  Sub<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">ify</span>
                 </h1>
 
                 <p className="text-zinc-400 text-lg leading-relaxed">
-                  A minimalist number puzzle that challenges your spatial thinking. Merge hexagonal tiles,
-                  plan your moves strategically, and chase high scores. Clean design. No ads. Pure focus.
+                  Take control of your subscriptions. Track Netflix, Spotify, and all your favorite services.
+                  Get smart reminders before trials end and payments are due. Stay organized, save money.
                 </p>
 
                 {/* Stats */}
@@ -79,7 +79,7 @@ const HexaMergeDetail = () => {
                   {stats.map((stat, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center">
-                        <stat.icon className="w-5 h-5 text-orange-400" />
+                        <stat.icon className="w-5 h-5 text-cyan-400" />
                       </div>
                       <div>
                         <div className="text-2xl font-bold text-white font-orbitron">{stat.value}</div>
@@ -92,19 +92,19 @@ const HexaMergeDetail = () => {
                 {/* Download Button */}
                 <div className="pt-6">
                   <a
-                    href="https://apps.apple.com/tr/app/hexamerge-color-merge-puzzle/id6755496409?l=tr"
+                    href="https://apps.apple.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative inline-flex px-8 py-4 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    className="group relative inline-flex px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)]"
                   >
                     <div className="relative z-10 flex items-center gap-3">
                       <Apple className="w-5 h-5" />
                       <div className="text-left">
-                        <div className="text-xs opacity-60 leading-none mb-1">Download on</div>
+                        <div className="text-xs opacity-80 leading-none mb-1">Download on</div>
                         <div className="leading-none">App Store</div>
                       </div>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-orange-200 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                   </a>
                 </div>
               </div>
@@ -116,16 +116,16 @@ const HexaMergeDetail = () => {
                   <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-zinc-900 bg-zinc-900">
                     {/* Screenshot */}
                     <img
-                      src="/gamess.jpg"
-                      alt="HexaMerge Gameplay"
+                      src="/subify/subify1.jpg"
+                      alt="Subify App"
                       className="w-full h-auto object-cover"
                     />
                     {/* Shine effect overlay */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
                   </div>
                   {/* Decorative elements */}
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500/20 backdrop-blur-md rounded-full animate-pulse-slow" />
-                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-amber-500/20 backdrop-blur-md rounded-full" />
+                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-500/20 backdrop-blur-md rounded-full animate-pulse-slow" />
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500/20 backdrop-blur-md rounded-full" />
                 </div>
               </div>
             </div>
@@ -137,10 +137,10 @@ const HexaMergeDetail = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="font-orbitron text-3xl md:text-4xl font-bold text-white mb-4">
-                Why HexaMerge?
+                Why Subify?
               </h2>
               <p className="text-zinc-400 max-w-2xl mx-auto">
-                Designed with simplicity and user experience at its core. Every feature serves a purpose.
+                Everything you need to manage your subscriptions in one beautiful app.
               </p>
             </div>
 
@@ -150,8 +150,8 @@ const HexaMergeDetail = () => {
                   key={index}
                   className="p-6 bg-zinc-900/30 border border-white/5 rounded-xl hover:bg-zinc-900/60 transition-all duration-300 group transform hover:scale-105"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-6 h-6 text-orange-400" />
+                  <div className="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
                   <h3 className="font-orbitron text-lg font-bold text-white mb-2">{feature.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{feature.description}</p>
@@ -169,7 +169,7 @@ const HexaMergeDetail = () => {
                 See It In Action
               </h2>
               <p className="text-zinc-400 max-w-2xl mx-auto">
-                Experience the clean, intuitive interface designed for focused gameplay.
+                A clean, intuitive interface designed to make subscription management effortless.
               </p>
             </div>
 
@@ -179,27 +179,26 @@ const HexaMergeDetail = () => {
                 <div className="relative max-w-sm">
                   <div className="rounded-2xl overflow-hidden border-4 border-zinc-800 shadow-2xl transform hover:scale-105 transition-all duration-300">
                     <img
-                      src="/gamess.jpg"
-                      alt="HexaMerge Gameplay"
+                      src="/subify/subify1.jpg"
+                      alt="Subify Popular Services"
                       className="w-full h-auto"
                     />
                   </div>
                   {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-orange-500/20 via-transparent to-transparent rounded-2xl pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent rounded-2xl pointer-events-none" />
                 </div>
               </div>
 
               {/* Screenshot Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  { src: '/gamess2.jpg', alt: 'HexaMerge Screenshot 2' },
-                  { src: '/gamess3.jpg', alt: 'HexaMerge Screenshot 3' },
-                  { src: '/gamess4.jpg', alt: 'HexaMerge Screenshot 4' },
-                  { src: '/gamess5.jpg', alt: 'HexaMerge Screenshot 5' }
+                  { src: '/subify/subify2.jpg', alt: 'Subify Screenshot 2' },
+                  { src: '/subify/subify3.jpg', alt: 'Subify Screenshot 3' },
+                  { src: '/subify/subify4.jpg', alt: 'Subify Screenshot 4' }
                 ].map((screenshot, index) => (
                   <div
                     key={index}
-                    className="relative rounded-xl overflow-hidden border-2 border-zinc-800 shadow-lg transform hover:scale-105 hover:border-orange-500/50 transition-all duration-300 cursor-pointer group"
+                    className="relative rounded-xl overflow-hidden border-2 border-zinc-800 shadow-lg transform hover:scale-105 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer group"
                   >
                     <img
                       src={screenshot.src}
@@ -207,7 +206,7 @@ const HexaMergeDetail = () => {
                       className="w-full h-auto"
                     />
                     {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-orange-500/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 ))}
               </div>
@@ -215,24 +214,24 @@ const HexaMergeDetail = () => {
           </div>
         </section>
 
-        {/* How to Play Section */}
+        {/* How it Works Section */}
         <section className="py-20 bg-zinc-900/20">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-orbitron text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-                How to Play
+                How It Works
               </h2>
 
               <div className="space-y-6">
                 <div className="p-6 bg-zinc-900/40 border border-white/5 rounded-xl">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 text-white font-bold flex items-center justify-center">
                       1
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-2">Place Tiles</h3>
+                      <h3 className="font-bold text-white mb-2">Add Your Subscriptions</h3>
                       <p className="text-zinc-400 text-sm">
-                        Drag and drop numbered hexagonal tiles onto the game board. Plan your placement carefully.
+                        Choose from popular services or add custom subscriptions. Set payment dates, trial periods, and costs.
                       </p>
                     </div>
                   </div>
@@ -240,13 +239,13 @@ const HexaMergeDetail = () => {
 
                 <div className="p-6 bg-zinc-900/40 border border-white/5 rounded-xl">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 text-white font-bold flex items-center justify-center">
                       2
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-2">Merge Numbers</h3>
+                      <h3 className="font-bold text-white mb-2">Get Smart Reminders</h3>
                       <p className="text-zinc-400 text-sm">
-                        When three or more identical numbers touch, they merge into the next number. Create chains for higher scores.
+                        Receive notifications before your trial ends and one day before payment is due. Never get surprised by charges.
                       </p>
                     </div>
                   </div>
@@ -254,13 +253,13 @@ const HexaMergeDetail = () => {
 
                 <div className="p-6 bg-zinc-900/40 border border-white/5 rounded-xl">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 text-white font-bold flex items-center justify-center">
                       3
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-2">Manage Space</h3>
+                      <h3 className="font-bold text-white mb-2">Track Your Spending</h3>
                       <p className="text-zinc-400 text-sm">
-                        The board fills up quickly. Think ahead and manage your space wisely. Game ends when no more moves are possible.
+                        View monthly and yearly statistics. Understand where your money goes and make better decisions.
                       </p>
                     </div>
                   </div>
@@ -274,28 +273,28 @@ const HexaMergeDetail = () => {
         <section className="py-20 bg-gradient-to-b from-zinc-900/20 to-black">
           <div className="container mx-auto px-6 text-center">
             <h2 className="font-orbitron text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Play?
+              Ready to Take Control?
             </h2>
             <p className="text-zinc-400 max-w-xl mx-auto mb-12">
-              Join thousands of players enjoying HexaMerge. Free to download, no ads, no tracking.
+              Start managing your subscriptions smarter. Free to download, no hidden fees.
             </p>
 
             <a
-              href="https://apps.apple.com/tr/app/hexamerge-color-merge-puzzle/id6755496409?l=tr"
+              href="https://apps.apple.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex px-10 py-5 bg-white text-black rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+              className="group relative inline-flex px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)]"
             >
               <div className="relative z-10 flex items-center gap-3">
                 <Apple className="w-6 h-6" />
                 <span>Download for iOS</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-200 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
 
             <p className="mt-8 text-zinc-600 text-sm">
               Questions? Contact us at{' '}
-              <a href="mailto:support@cnblt.studio" className="text-orange-400 hover:text-orange-300">
+              <a href="mailto:support@cnblt.studio" className="text-cyan-400 hover:text-cyan-300">
                 support@cnblt.studio
               </a>
             </p>
@@ -306,4 +305,4 @@ const HexaMergeDetail = () => {
   );
 };
 
-export default HexaMergeDetail;
+export default SubifyDetail;

@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import PrivacyPolicy from './PrivacyPolicy';
 import Terms from './Terms';
 import HexaMergeDetail from './HexaMergeDetail';
+import SubifyDetail from './SubifyDetail';
 
 // Smooth scroll component
 function ScrollToTop() {
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/projects/hexamerge" element={<HexaMergeDetail />} />
+        <Route path="/projects/subify" element={<SubifyDetail />} />
       </Routes>
     </Router>
   );
