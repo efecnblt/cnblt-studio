@@ -92,7 +92,7 @@ const SubifyDetail = () => {
                 {/* Download Button */}
                 <div className="pt-6">
                   <a
-                    href="https://apps.apple.com"
+                    href="https://apps.apple.com/us/app/subify-subscription-tracker/id6756390234"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative inline-flex px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)]"
@@ -280,7 +280,7 @@ const SubifyDetail = () => {
             </p>
 
             <a
-              href="https://apps.apple.com"
+              href="https://apps.apple.com/us/app/subify-subscription-tracker/id6756390234"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-bold overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)]"
